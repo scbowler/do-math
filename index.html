@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch VS Object</title>
+
+    <!-- Linked Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Linked Script Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</head>
+<body>
+    <div id="main" class="container">
+        <h1 class="center">Switch vs Object</h1>
+
+        <div class="row">
+            <div class="col s4 offset-s4 input-field">
+                <input class="center" id="iterations" type="number">
+                <label for="iterations">Equation Iterations</label>
+            </div>
+        </div>
+        <div class="row">
+            <h5 class="center">Equation to Run</h5>
+            <div class="col s6 offset-s3">
+                <div class="col s5 input-field">
+                    <input class="center" id="x" type="number">
+                </div>
+                <div class="col s2 input-field">
+                    <select id="operator">
+                        <option value="+" selected>add</option>
+                        <option value="-">remove</option>
+                        <option value="*">clear</option>
+                        <option value="/">&divide;</option>
+                    </select>
+                </div>
+                <div class="col s5 input-field">
+                    <input class="center" id="y" type="number">
+                </div>
+            </div>
+        </div>
+
+        <div class="row center">
+            <button class="btn blue" id="both-button">Run Both Tests</button>
+        </div>
+
+        <div class="row">
+            <div class="col s6">
+                <div class="row center">
+                    <button class="btn blue darken-2" id="switch-button">Run Switch Benchmark</button>
+                </div>
+                <div class="row">
+                    <ul class="collection" id="switch-results"></ul>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="row center">
+                    <button class="btn blue darken-2" id="object-button">Run Object Benchmark</button>
+                </div>
+                <div class="row">
+                    <ul class="collection" id="object-results"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dom.js"></script>
+</body>
+</html>
