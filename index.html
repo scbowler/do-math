@@ -20,28 +20,37 @@
         <h1 class="center">Switch vs Object</h1>
 
         <div class="row">
-            <div class="col s4 offset-s4 input-field">
-                <input class="center" id="iterations" type="number">
-                <label for="iterations">Equation Iterations</label>
+            <div class="col s12 m6">
+                <h4>Config</h4>
+                <div class="row">
+                    <div class="col s6 offset-s3 input-field">
+                        <input class="center" id="iterations" type="number">
+                        <label for="iterations">Equation Iterations</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <h5 class="center">Equation to Run</h5>
+                    <div class="col s5 input-field">
+                        <input class="center" id="x" type="number">
+                        <label for="x">X</label>
+                    </div>
+                    <div class="col s2 input-field">
+                        <select id="operator">
+                            <option value="+" selected>add</option>
+                            <option value="-">remove</option>
+                            <option value="*">clear</option>
+                            <option value="/">&divide;</option>
+                        </select>
+                    </div>
+                    <div class="col s5 input-field">
+                        <input class="center" id="y" type="number">
+                        <label for="y">Y</label>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <h5 class="center">Equation to Run</h5>
-            <div class="col s6 offset-s3">
-                <div class="col s5 input-field">
-                    <input class="center" id="x" type="number">
-                </div>
-                <div class="col s2 input-field">
-                    <select id="operator">
-                        <option value="+" selected>add</option>
-                        <option value="-">remove</option>
-                        <option value="*">clear</option>
-                        <option value="/">&divide;</option>
-                    </select>
-                </div>
-                <div class="col s5 input-field">
-                    <input class="center" id="y" type="number">
-                </div>
+            <div class="col s12 m6">
+                <h4>Overall Results</h4>
+                <p><small>Overall results are only calculated when the <code>RUN BOTH TESTS</code> button is clicked</small></p>
             </div>
         </div>
 
@@ -50,21 +59,22 @@
         </div>
 
         <div class="row">
-            <div class="col s6">
-                <div class="row center">
-                    <button class="btn blue darken-2" id="switch-button">Run Switch Benchmark</button>
-                </div>
-                <div class="row">
-                    <ul class="collection" id="switch-results"></ul>
-                </div>
+            <div class="col s4 right-align">
+                <button class="btn blue darken-2" id="switch-button">Run Switch Benchmark</button>
             </div>
-            <div class="col s6">
-                <div class="row center">
-                    <button class="btn blue darken-2" id="object-button">Run Object Benchmark</button>
-                </div>
-                <div class="row">
-                    <ul class="collection" id="object-results"></ul>
-                </div>
+            <div class="col s4">
+                <h4 class="center">Current Results</h4>
+            </div>
+            <div class="col s4">
+                <button class="btn blue darken-2" id="object-button">Run Object Benchmark</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 z-depth-1">
+                <ul class="collection" id="switch-results"></ul>
+            </div>
+            <div class="col s6 z-depth-1">
+                <ul class="collection" id="object-results"></ul>
             </div>
         </div>
     </div>

@@ -9,6 +9,8 @@
             y: 6025
         };
 
+        addBtnWavesEffect();
+
         $('select').formSelect();
 
         setFormValues(initialFormValues);
@@ -26,7 +28,7 @@
             })
             .on('click', '#both-button', () => {
                 runTest('#switch-results', switchDoMath);
-                runTest('#object-results', objectDoMath);
+                runTest('#object-results', shorterDoMath);
             });
     }
 
@@ -93,5 +95,9 @@
             average: totalTime / count,
             total: totalTime
         }
+    }
+
+    function addBtnWavesEffect(){
+        $('.btn').addClass('waves-effect waves-light');
     }
 }());
